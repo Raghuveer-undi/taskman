@@ -1,0 +1,264 @@
+/* Minimal, clean styles for the Task Manager */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 30px;
+  padding: 30px;
+  font-family: -apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: #f7f7f8;
+  color: #111111;
+}
+
+.App {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+header {
+  margin-bottom: 16px;
+}
+
+header h1 {
+  margin: 0 0 4px 0;
+  font-size: 28px;
+}
+
+header p {
+  margin: 0;
+  color: #555;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.filters input,
+.filters select {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+  min-width: 180px;
+}
+
+.task-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+#inp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+#inp input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 14px;
+}
+
+#inp button {
+  border: 0;
+  background: #111111;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#btns select,
+#btns input[type='date'] {
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.error-message {
+  color: #b91c1c;
+  margin: 0 0 8px 0;
+  font-size: 13px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.task-list li.overdue {
+  border-color: #f97316;
+  background: #fff7ed;
+}
+
+.task-list li.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.task-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-main span {
+  display: block;
+  font-weight: 600;
+}
+
+.task-main small {
+  color: #555;
+}
+
+.overdue-label {
+  color: #b91c1c;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.task-actions,
+.edit-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.task-actions button,
+.edit-actions button {
+  border: 0;
+  background: #111111;
+  color: #ffffff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.task-actions button:hover,
+.edit-actions button:hover,
+#inp button:hover,
+.clear-btn:hover,
+.secondary-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.task-actions button:nth-child(2),
+.edit-actions button:nth-child(2) {
+  background: #2563eb;
+}
+
+.task-actions button:nth-child(3) {
+  background: #dc2626;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.task-edit {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-edit input,
+.task-edit select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.edit-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.progress-tracker {
+  margin-top: 16px;
+}
+
+.progress-tracker p {
+  margin: 0 0 8px 0;
+}
+
+.overdue-notice {
+  margin: 4px 0 0;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #eeeeee;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #16a34a;
+  transition: width 220ms ease;
+}
+
+.clear-btn,
+.secondary-btn {
+  margin-top: 16px;
+  color: #ffffff;
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.clear-btn {
+  background: #dc2626;
+}
+
+.secondary-btn {
+  background: #2563eb;
+}
